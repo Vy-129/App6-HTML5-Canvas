@@ -32,24 +32,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-
-<script>
-	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-
-	//Create variables for canvas
-	var a_canvas = document.getElementById("a"); //to find the <canvas> element in the DOM
-	var a_context = a_canvas.getContext("2d"); //Pass the string 2d to make a 2-D canvas
-	
-	//Create function to draw a rectangle
-	function drawRect(){
-		a_context.fillStyle = "black"; //Make rectangle black
-		a_context.fillRect(50, 25, 150, 100); //rectangle that starts at coordinate (50, 25) and has width of 150 and height of 100	
-	}
-</script>
-
-
 <style>	
 .body {
      margin: 0em;
@@ -97,9 +79,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<canvas id="a" width="400" height="400" style="border:1px dotted #000000;"></canvas> <!--Add canvas with width and height of 400 and dotted border-->
 		
-		<button class="w3-btn w3-green" onclick="drawRect()"> Draw a rectangle</button> <!--Button to call function to draw a rectangle-->
+		<button onclick="drawRect()" class="w3-btn w3-green"> Draw a rectangle</button> <!--Button to call function to draw a rectangle-->
 	</div>
 </div>
+
+<script>
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
+	//Create variables for canvas
+	var a_canvas = document.getElementById("a"); //to find the <canvas> element in the DOM
+	var a_context = a_canvas.getContext("2d"); //Pass the string 2d to make a 2-D canvas
+	
+	//Create function to draw a rectangle
+	function drawRect(){
+		a_context.fillStyle = "black"; //Make rectangle black
+		a_context.fillRect(50, 25, 150, 100); //rectangle that starts at coordinate (50, 25) and has width of 150 and height of 100	
+	}
+</script>
 
 <!--Footer for every page with different color than original-->
 <footer class="w3-bottom w3-container w3-flat-alizarin">
