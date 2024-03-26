@@ -84,7 +84,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 		<button onclick="displayName()" class="w3-btn w3-green"> Display name</button> <!--Button to call function to display name as text-->
 
-		<button onclick="drawImg()" class="w3-btn w3-green"> Display image</button> <!--Button to call function to display image-->
+		<button onclick="drawImage()" class="w3-btn w3-green"> Display image</button> <!--Button to call function to display image-->
 		<img id="duck" src="https://i.pinimg.com/736x/19/82/87/198287e62a7827dfc2c1393467225019.jpg" alt="duck" width="30" height="30"> <!--Code for image-->
 	</div>
 </div>
@@ -115,7 +115,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//Create function to display image
 	function drawImage(){
 		var img = document.getElementById("duck"); //Variable to call img on page 1
-		a_content.drawImage(img, 50, 25); //Display img start at (50, 25)
+		a_content.drawImage(img, 50, 25, 150, 150); //Display img start at (50, 25)
 	}
 </script>
 
