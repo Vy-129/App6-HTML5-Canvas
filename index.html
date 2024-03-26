@@ -51,6 +51,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: 0vw;
     z-index: 1;
 }
+
+<!--Code below is used to adjust the size of image insert on page 1-->
+img, object {
+	max-height: 25%;
+	max-width: 25%;
+}
 </style>
 
 <body>
@@ -83,6 +89,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<button onclick="drawRect()" class="w3-btn w3-green"> Draw a rectangle</button> <!--Button to call function to draw a rectangle-->
 
 		<button onclick="displayName()" class="w3-btn w3-green"> Display name</button> <!--Button to call function to display name as text-->
+
+		<img id="duck" src="https://i.pinimg.com/736x/19/82/87/198287e62a7827dfc2c1393467225019.jpg" alt="duck"> <!--Code for image-->
 	</div>
 </div>
 
@@ -103,10 +111,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	//Create function to display name 
 	function displayName(){
-		a_context.font = "bold 40px Courier New";
-		a_context.textAlign = "center";
+		a_context.font = "bold 40px Courier New"; //Set font and size of text
+		a_context.textAlign = "center"; //Set text align at center
 		a_context.textBaseline = "bottom"; //Text at the bottom of baseline
 		a_context.fillText("Vy Vu", 200, 200); //Text at the center of canvas
+	}
+
+	//Create function to display image
+	function drawImg(){
+		var img = document.getElementById("duck"); //Variable to call img on page 1
+		a_content.drawImg(img, 50, 25, 150, 100); //display img start at (50, 25)
 	}
 </script>
 
