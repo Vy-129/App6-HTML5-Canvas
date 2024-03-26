@@ -20,6 +20,7 @@ Brief Description of Goal of Code:
 Learn to display shapes, lines, text, and images onto a portion of an HTML5 page called a canvas
  
 Known Issues:
+Functions only work when the script code is put under where the buttons are called
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -96,6 +97,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function drawRect(){
 		a_context.fillStyle = "black"; //Make rectangle black
 		a_context.fillRect(50, 25, 150, 100); //rectangle that starts at coordinate (50, 25) and has width of 150 and height of 100	
+	}
+
+	//Create function to display name 
+	function displayName(){
+		a_context.textBaseline = "bottom"; //Text at the bottom of baseline
+		a_context.fillText("Vy Vu", 200, 200); //Text at the center of canvas
 	}
 </script>
 
