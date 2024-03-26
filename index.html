@@ -44,7 +44,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	//Create function to draw a rectangle
 	function drawRect(){
-		//not call fillstyle which will set it at default with solid black
+		a_context.fillStyle = "black"; //Make rectangle black
 		a_context.fillRect(50, 25, 150, 100);//rectangle that starts at coordinate (50, 25) and has width of 150 and height of 100	
 	}
 </script>
@@ -97,7 +97,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<canvas id="a" width="400" height"400" style="border:1px dotted #000000;"></canvas><!--Add canvas with width and height of 400 and dotted border-->
 		<!--Button to call function to draw a rectangle-->
-		<a onclick="drawRect();" class="w3-btn w3-green"> Draw Rectangle</a>
+		<button onclick="drawRect()" class="w3-btn w3-green"> Draw Rectangle</button>
 	</div>
 </div>
 
