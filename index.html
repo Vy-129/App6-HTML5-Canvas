@@ -84,11 +84,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 		<button onclick="displayName()" class="w3-btn w3-green"> Display name</button> <!--Button to call function to display name as text-->
 
-		<button onclick="drawImage()" class="w3-btn w3-green"> Display image</button> <!--Button to call function to display image-->
+		<button onclick="drawImg()" class="w3-btn w3-green"> Display image</button> <!--Button to call function to display image-->
 
 		<button onclick="clearCanvas()" class="w3-btn w3-green"> Clear canvas</button> <!--Button to call function to clear canvas-->
-
-		<img id="duck" src="https://i.pinimg.com/736x/19/82/87/198287e62a7827dfc2c1393467225019.jpg" alt="duck" width="100" height="100"> <!--Code for image-->
 	</div>
 </div>
 
@@ -116,9 +114,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	}
 
 	//Create function to display image
-	function drawImage(){
-		var img = document.getElementById("duck"); //Variable to call img on page 1
-		a_content.drawImage(img, 250, 250, 150, 150); //Display img start at (250, 250)
+	function drawImg(){
+		var duck = new Image(); //Variable to call image
+		duck.src = "https://i.pinimg.com/736x/19/82/87/198287e62a7827dfc2c1393467225019.jpg"; //assign location for image
+		a_content.drawImage(duck, 250, 250, 150, 150); //Display img start at (250, 250)
 	}
 
 	//Create function to clear canvas
